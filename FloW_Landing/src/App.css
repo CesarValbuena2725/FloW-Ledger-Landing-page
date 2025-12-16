@@ -32,16 +32,16 @@ body {
 
 .content-body h2{
   color: #FFD3D5;
-  padding: 1% 10%;
-  font-size: 1.2rem;
+  padding: 1% 6%;
+  font-size: 1.5rem;
   text-align: left;
 }
 
-.content-body p{
+.impact-paragraph{
   color: #FFD3D5;
   padding: 0% 10%;
-  font-size: 3.3vw;
-
+  font-size: 1.2rem;
+  padding: 1% 10%;
 }
 
 .button-holder {
@@ -53,9 +53,26 @@ body {
   padding: 5% 0%;
 }
 
+.feature-holder {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.main-benefit {
+  width: 100%;
+  padding: 5% 0%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2%;
+  overflow: hidden;
+}
+
 .separator {
   width: 80%;
+  justify-self: center;
   border: 1px solid #6E3978;
+  margin: 0;
 }
 
 .footer {

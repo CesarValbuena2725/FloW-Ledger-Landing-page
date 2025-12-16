@@ -5,11 +5,12 @@ export default function BasicButton({
     backgroundCol,
     text,
     textColor,
-    width
+    onClick
 }) {
 
     return (
         <button
+            onClick={onClick}
             style={{
                 padding: "8px 30px",
                 fontSize: "8px",
