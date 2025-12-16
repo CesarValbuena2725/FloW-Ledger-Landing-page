@@ -66,7 +66,7 @@ function App() {
           <li>
             About |
           </li>
-          <li onClick={() => alert('Sorry, this feature is still undergoing work!')}>
+          <li onClick={() => alert('Sorry, this feature is still undergoing some work!')}>
             Testimonials |
           </li>
           <li>
