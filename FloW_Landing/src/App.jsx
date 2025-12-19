@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <header className='header'>
-        <img src="Logo_Mas_Nombre-NoBackground.png" alt="FloWLdgr Logo" />
+        <img src="No_Background_White.png" alt="FloWLdgr Logo" />
         <h1>Flow Ledger</h1>
       </header>
 
@@ -34,17 +34,17 @@ function App() {
           </p>
           <div className='button-holder'>
             <BasicButton
-              backgroundCol={"#92487A"}
-              borderCol={"#E49BA6"}
+              backgroundCol={"#3069cbff"}
+              borderCol={"#0B3D91"}
               text={"GET STARTED"}
-              textColor={"#FFFFFF"}
+              textColor={"#F5F7FA"}
             />
 
             <BasicButton
-              backgroundCol={"#540863"}
-              borderCol={"#FFD3D5"}
+              backgroundCol={"#0B3D91"}
+              borderCol={"#153163"}
               text={"LEARN MORE"}
-              textColor={"#FFD3D5"}
+              textColor={"#F5F7FA"}
             />
           </div>
         </section>
@@ -93,7 +93,7 @@ function App() {
       </main>
 
       <footer className='footer'>
-        <ul className='contact'>
+        <ul className='footer-contact'>
           <li>Features |</li>
           <li>About |</li>
           <li onClick={() => alert('Sorry, this feature is still undergoing some work!')}>Testimonials |</li>

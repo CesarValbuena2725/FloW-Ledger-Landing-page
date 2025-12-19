@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Palette Showcase</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #f0f0f0;
+    }
+
+    .palette {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* Exactly 5 columns */
+      gap: 30px;
+      padding: 40px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 900px; /* Optional: prevents it from stretching too wide on large screens */
+    }
+
+    .color-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .color-swatch {
+      width: 120px;
+      height: 120px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.2s;
+    }
+
+    .color-swatch:hover {
+      transform: scale(1.1);
+    }
+
+    .label {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* Responsive: On smaller screens, reduce to 3 or fewer columns */
+    @media (max-width: 800px) {
+      .palette {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .palette {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="palette">
+    <div class="color-item">
+      <div class="color-swatch" style="background-color: #0B3D91;"></div>
+      <div class="label">#0B3D91<br>Deep Blue</div>
+    </div>
+    <div class="color-item">
+      <div class="color-swatch" style="background-color: #00BFA5;"></div>
+      <div class="label">#00BFA5<br>Teal</div>
+    </div>
+    <div class="color-item">
+      <div class="color-swatch" style="background-color: #FFC107;"></div>
+      <div class="label">#FFC107<br>Amber</div>
+    </div>
+    <div class="color-item">
+      <div class="color-swatch" style="background-color: #333333;"></div>
+      <div class="label">#333333<br>Dark Gray</div>
+    </div>
+    <div class="color-item">
+      <div class="color-swatch" style="background-color: #E53935;"></div>
+      <div class="label">#E53935<br>Red</div>
+    </div>
+    <div class="color-item">
+      <div class="color-swatch" style="background-color: #F5F7FA;"></div>
+      <div class="label">#F5F7FA<br>Light Gray</div>
+    </div>
+    <div class="color-item">
+      <div class="color-swatch" style="background-color: #4CAF50;"></div>
+      <div class="label">#4CAF50<br>Green</div>
+    </div>
+    <div class="color-item">
+      <div class="color-swatch" style="background-color: #153163;"></div>
+      <div class="label">#153163<br>Darker Deep Blue</div>
+    </div>
+    <div class="color-item">
+      <div class="color-swatch" style="background-color: #3069cbff;"></div>
+      <div class="label">#3069CB<br>Light Sea Blue</div>
+    </div>
+  </div>
+
+</body>
+</html>

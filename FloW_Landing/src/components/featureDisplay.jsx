@@ -17,7 +17,7 @@ const FeatureImage = styled.div`
 
 const DisplayedTitle = styled.h3`
     margin: 0%;
-    color: #E49BA6;
+    color: #153163;
     font-weight: bold;
     padding: 15% 0%;
 `;
@@ -32,7 +32,7 @@ const Image = styled.img`
 
 const DisplayedText = styled.p`
     margin: 0%;
-    color: #E49BA6;
+    color: #153163;
     font-size: 1.2rem;
 `;
 

@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import { useState } from "react";
 import BasicButton from "./basicButton";
+import { ArrowBigLeftDash, ArrowBigRightDash } from 'lucide-react';
 
 const CommentBox = styled.h4`
-    color: #FFD3D5;
+    color: #0B3D91;
 `;
 
 const TitleBox = styled.p`
-    color: #E49BA6;
+    color: #0B3D91;
     font-weight: bold;
 `;
 
@@ -40,9 +41,9 @@ const Comments = [
     },
     {
         name: 'William Avendaño',
-        picture: 'profilepisc.jpg',
+        picture: 'William.jpeg',
         charge: 'Co-Founder, COO & CFO',
-        comment: 'Text here'
+        comment: 'As an undergraduate Industrial Engineering student specializing in Business Intelligence and Operations Optimization, I have worked with colleagues and employees whose sense of ownership was sometimes low due to a lack of integration within teams or organizations with misaligned goals (where employees` goals differ from the company`s mission and vision). This often creates a short-sighted perception of strong performance, while overlooking either requirements or costs. At FloW Ledger, we encourage coworkers to take initiative, go the extra mile, and care for the company’s resources, which should be used to serve people and support sustainable growth.'
     }
 ]
 
@@ -76,16 +77,16 @@ export default function CarruselComponent() {
             </TitleBox>
             <ButtonsContainer>
                 <BasicButton 
-                    onClick={handleNext}
-                    backgroundCol={'#92487A'}
-                    borderCol={'#E49BA6'}
-                    text={'<'}
+                    onClick={handlePrevious}
+                    backgroundCol={'#3069CB'}
+                    borderCol={'#153163'}
+                    text={<ArrowBigLeftDash />}
                 />
                 <BasicButton 
-                    onClick={handlePrevious}
-                    backgroundCol={'#92487A'}
-                    borderCol={'#E49BA6'}
-                    text={'>'}
+                    onClick={handleNext}
+                    backgroundCol={'#3069CB'}
+                    borderCol={'#153163'}
+                    text={<ArrowBigRightDash />}
                 />
             </ButtonsContainer>
         </Section>

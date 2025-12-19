@@ -14,18 +14,18 @@ const StyledForm = styled.form`
   border-radius: 8px;
 
   ::placeholder {
-    color: #FFD3D5;
+    color: #F5F7FA;
     opacity: 1;
   }
 `;
 
 const StyledInput = styled.input`
   padding: 0.5rem;
-  border: 2px solid #92487A;
-  background-color: #92487A;
+  border: 2px solid #153163;
+  background-color: #153163;
   border-radius: 4px;
   font-size: 1rem;
-  color: #FFD3D5;
+  color: #F5F7FA;
 
   &:focus {
     border-color: #007bff;
@@ -36,10 +36,10 @@ const StyledInput = styled.input`
 
 const StyledTextarea = styled.textarea`
   padding: 0.5rem;
-  border: 2px solid #92487A;
-  background-color: #92487A;
+  border: 2px solid #153163;
+  background-color: #153163;
   border-radius: 4px;
-  color: #FFD3D5;
+  color: #F5F7FA;
   font-size: 1rem;
   resize: vertical;
   width: 80%;
@@ -47,9 +47,9 @@ const StyledTextarea = styled.textarea`
 
 const StyledButton = styled.button`
   padding: 0.7rem 1rem;
-  border: 2px solid #92487A;
+  border: 2px solid #153163;
   background: none;
-  color: #FFD3D5;
+  color: #0B3D91;
   font-size: 1rem;
   border-radius: 4px;
   width: 50%;
@@ -76,6 +76,8 @@ export default function ContactForm() {
 
   return (
     <StyledForm onSubmit={handleSubmit}>
+      <h2 style={{textAlign: 'center'}}>Get in touch</h2>
+      <p style={{color: '#0B3D91', textAlign: 'center', fontWeight: 'bold'}}>Reach out and move your business forward.</p>
       <StyledInput
         placeholder="Email address"
         id="email"

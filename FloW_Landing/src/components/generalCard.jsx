@@ -10,7 +10,7 @@ const Title = styled.h2`
 const Description = styled.p`
     margin: 0;
     padding: 0% 10% 10%;
-    color: #E49BA6;
+    color: #0B3D91;
 `;
 
 const Image = styled.img`
@@ -43,8 +43,8 @@ export default function GeneralCard({ title, description, img }) {
             </Section>
 
             <Description>
-                    {description}
-                </Description>
+                {description}
+            </Description>
         </>
     )
 }
