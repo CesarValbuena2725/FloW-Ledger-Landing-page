@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import BasicButton from './components/basicButton'
 import FeatureDisplay from './components/featureDisplay'
 import GeneralCard from './components/generalCard'
@@ -19,9 +19,9 @@ function App() {
       <main className='content-body'>
         {/* Navigation */}
         <nav>
-          <ul className='contact'>
-            <li>Features |</li>
-            <li>About |</li>
+          <ul className='contact' style={{borderBottom: '2px solid #0B3D91'}}>
+            <li>Features </li>
+            <li>About </li>
             <li>Contact</li>
           </ul>
         </nav>
@@ -94,9 +94,9 @@ function App() {
 
       <footer className='footer'>
         <ul className='footer-contact'>
-          <li>Features |</li>
-          <li>About |</li>
-          <li onClick={() => alert('Sorry, this feature is still undergoing some work!')}>Testimonials |</li>
+          <li>Features </li>
+          <li>About </li>
+          <li onClick={() => alert('Sorry, this feature is still undergoing some work!')}>Testimonials </li>
           <li>Contact</li>
         </ul>
         <hr />

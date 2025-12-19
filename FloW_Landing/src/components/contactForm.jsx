@@ -8,8 +8,8 @@ const StyledForm = styled.form`
   flex-direction: column;
   gap: 1rem;
   width: 90%;
-  margin: 0;
-  padding: 10% 5%;
+  margin: 0 auto;
+  padding: 8% 5%;
   background: none;
   border-radius: 8px;
 
@@ -17,10 +17,19 @@ const StyledForm = styled.form`
     color: #F5F7FA;
     opacity: 1;
   }
+
+  @media (min-width: 768px){
+    width: 70%;
+    padding: 4% 2%;
+  }
+
+  @media (min-width: 1024px){
+    width: 50%;
+  }
 `;
 
 const StyledInput = styled.input`
-  padding: 0.5rem;
+  padding: 0.7rem;
   border: 2px solid #153163;
   background-color: #153163;
   border-radius: 4px;
@@ -42,7 +51,7 @@ const StyledTextarea = styled.textarea`
   color: #F5F7FA;
   font-size: 1rem;
   resize: vertical;
-  width: 80%;
+  width: 100%;
 `;
 
 const StyledButton = styled.button`
@@ -68,8 +77,11 @@ export default function ContactForm() {
 
   useEffect(() => {
     if (state.succeeded) {
-      setEmail("");
-      setMessage("");
+      // avoid synchronous setState calls inside effect to prevent cascading renders
+      setTimeout(() => {
+        setEmail("");
+        setMessage("");
+      }, 0);
       alert("Message sent! 🎉");
     }
   }, [state.succeeded]);

@@ -7,6 +7,14 @@ const DisplayContainer = styled.div`
     display: flex;
     flex-direction: column;
     padding: 5% 15%;
+
+    @media (min-width: 768px){
+      padding: 4% 6%;
+    }
+
+    @media (min-width: 1024px){
+      padding: 3% 4%;
+    }
 `;
 
 const FeatureImage = styled.div`

@@ -1,19 +1,21 @@
 
 
 export default function BasicButton({
-    borderCol,
-    backgroundCol,
+    borderCol = '#153163',
+    backgroundCol = '#3069CB',
     text,
-    textColor,
-    onClick
+    textColor = '#FFFFFF',
+    onClick,
+    ariaLabel = ''
 }) {
 
     return (
         <button
+            className="basic-button"
+            aria-label={ariaLabel}
+            title={ariaLabel}
             onClick={onClick}
             style={{
-                padding: "8px 30px",
-                fontSize: "8px",
                 backgroundColor: backgroundCol,
                 border: `1px solid ${borderCol}`,
                 color: textColor,
@@ -24,4 +26,4 @@ export default function BasicButton({
             {text}
         </button>
     )
-}
+} 

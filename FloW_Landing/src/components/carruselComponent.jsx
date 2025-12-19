@@ -15,21 +15,40 @@ const TitleBox = styled.p`
 const Image = styled.img`
     display: block;
     margin: 0 auto;
-    width: 25%;
+    width: 35%;
+    max-width: 160px;
     height: auto;
     border-radius: 100%;
-    object-fit: fit;
+    object-fit: cover;
+
+    @media (min-width: 768px) {
+      width: 140px;
+      margin: 1rem 0;
+    }
+
+    @media (min-width: 1024px) {
+      width: 120px;
+      margin: 0 1rem 0 0;
+    }
 `;
 
 const Section = styled.section`
-    padding: 0% 15%;
+    padding: 0% 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    @media (min-width: 768px){
+      padding: 0% 12%;
+    }
 `;
 
 const ButtonsContainer = styled.div`
     display: flex;
     justify-content: center;
     gap: 5%;
-    padding: 5% 0%;
+    padding: 2% 0%;
 `;
 
 const Comments = [
@@ -78,12 +97,14 @@ export default function CarruselComponent() {
             <ButtonsContainer>
                 <BasicButton 
                     onClick={handlePrevious}
+                    ariaLabel={"Previous testimonial"}
                     backgroundCol={'#3069CB'}
                     borderCol={'#153163'}
                     text={<ArrowBigLeftDash />}
                 />
                 <BasicButton 
                     onClick={handleNext}
+                    ariaLabel={"Next testimonial"}
                     backgroundCol={'#3069CB'}
                     borderCol={'#153163'}
                     text={<ArrowBigRightDash />}

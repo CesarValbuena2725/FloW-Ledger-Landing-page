@@ -1,7 +1,24 @@
-body {
+html, body {
   margin: 0;
   padding: 0;
   font-family: system-ui, sans-serif;
+  /* Prevent accidental horizontal scroll from overflowing children */
+  overflow-x: hidden;
+}
+
+/* Use border-box globally to make percentage paddings/margins predictable */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, picture, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+svg {
+  display: block;
 }
 
 
@@ -53,6 +70,17 @@ body {
   padding: 5% 0%;
 }
 
+
+.basic-button{
+  padding: 8px 30px;
+  font-size: 0.9rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 .feature-holder {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -78,8 +106,9 @@ body {
 .footer {
   position: relative;
   width: 100%;
-  height: 20vh;
   background-color: #0B3D91;
+  box-sizing: border-box;
+  padding: 1.25rem 0 2rem 0; /* give vertical breathing room without forcing overflow */
 }
 
 .contact {
@@ -88,14 +117,17 @@ body {
   display: flex;
   gap: 35px;
   justify-content: center;
+  flex-wrap: wrap; /* allow nav items to wrap on smaller widths */
 }
 
 .footer-contact {
   margin: 0;
-  padding: 5% 0%;
+  padding: 1% 1rem;
   display: flex;
-  gap: 35px;
+  gap: 12px;
   justify-content: center;
+  flex-wrap: wrap; /* important to prevent horizontal overflow */
+  align-items: center;
 }
 
 .contact li{
@@ -103,6 +135,16 @@ body {
   list-style: none;
   font-weight: bold;
   color: #153163;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: box-shadow 0.18s ease, transform 0.12s ease;
+  display: inline-block;
+}
+
+.contact li:hover{
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(21,48,99,0.12);
+  transform: translateY(-2px);
 }
 
 .footer-contact li{
@@ -110,6 +152,31 @@ body {
   list-style: none;
   font-weight: bold;
   color: #F5F7FA;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: box-shadow 0.18s ease, transform 0.12s ease;
+  display: inline-block;
+  white-space: normal; /* allow wrapping inside items */
+  text-align: center;
+}
+
+.footer-contact li:hover{
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(245,247,250,0.12);
+  transform: translateY(-2px);
+}
+
+/* guard against long unbroken text in footer paragraph */
+.footer p{
+  display: block;
+  width: 100%;
+  font-size: .8rem;
+  color: #F5F7FA;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  white-space: normal;
+  word-break: break-word;
 }
 
 .footer hr {
@@ -125,4 +192,109 @@ body {
   text-align: center;
   justify-content: center;
   font-weight: bold;
+}
+
+/* -------------------- Responsive Layout (Desktop / Tablet) -------------------- */
+:root{
+  --max-width: 1200px;
+}
+
+/* Center content and constrain max width on larger screens */
+.content-body{
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px){
+  .header{
+    height: 12vh;
+  }
+
+  .header img{
+    width: auto;
+    max-width: 240px;
+  }
+
+  .content-body h2{
+    font-size: 2rem;
+    padding: 1% 6%;
+  }
+
+  .impact-paragraph{
+    font-size: 1.1rem;
+    padding: 1% 6%;
+  }
+
+  .feature-holder{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 0 4%;
+  }
+
+  .main-benefit{
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2% 6%;
+    gap: 2rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .button-holder{
+    gap: 10px;
+    padding: 3% 0;
+  }
+
+  .separator{
+    width: 60%;
+  }
+
+  .contact, .footer-contact{
+    justify-content: space-between;
+    padding: 2% 10%;
+  }
+
+  .contact li{
+    font-size: 1rem;
+  }
+
+  .footer-contact li{
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .content-body{
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .header{
+    height: 14vh;
+    justify-content: flex-start;
+    padding-left: 4rem;
+  }
+
+  .header img{
+    max-width: 320px;
+  }
+
+  .feature-holder{
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .main-benefit{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+    padding: 3% 8%;
+  }
+
+  .separator{
+    width: 40%;
+  }
+
+  .basic-button{
+    padding: 10px 36px;
+    font-size: 0.95rem;
+  }
 }
