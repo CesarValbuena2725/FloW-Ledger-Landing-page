@@ -62,7 +62,7 @@ const Comments = [
         name: 'William Avendaño',
         picture: 'William.jpeg',
         charge: 'Co-Founder, COO & CFO',
-        comment: 'As an undergraduate Industrial Engineering student specializing in Business Intelligence and Operations Optimization, I have worked with colleagues and employees whose sense of ownership was sometimes low due to a lack of integration within teams or organizations with misaligned goals (where employees` goals differ from the company`s mission and vision). This often creates a short-sighted perception of strong performance, while overlooking either requirements or costs. At FloW Ledger, we encourage coworkers to take initiative, go the extra mile, and care for the company’s resources, which should be used to serve people and support sustainable growth.'
+        comment: 'As an undergraduate Industrial Engineering student specializing in Business Intelligence and Operations Optimization, I have worked with colleagues and employees whose sense of ownership was sometimes low due to a lack of integration within teams or organizations with misaligned goals (where employees` goals differ from the company`s mission and vision). This often creates a short-sighted perception of strong performance, while overlooking either requirements or costs. At FloW Ledger, we encourage coworkers to take initiative, go the extra mile, and care for the company`s resources, which should be used to serve people and support sustainable growth.'
     }
 ]
 

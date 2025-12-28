@@ -98,7 +98,7 @@ const Image = styled.img`
     width: 140px;
     height: auto;
     border-radius: 8%;
-    object-fit: cover;
+    object-fit: fit;
     align-self: center;
     justify-self: center;
     /* never exceed the visual height of the left column (title + description) */
@@ -116,7 +116,7 @@ const Image = styled.img`
     @media (min-width: 1024px){
       width: auto;
       max-width: 520px;
-      height: 100%; /* prefer to stretch but constrained by max-height */
+      height: 80%; /* prefer to stretch but constrained by max-height */
       max-height: var(--left-height, 520px);
       align-self: stretch;
       justify-self: end;
